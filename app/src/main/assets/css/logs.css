@@ -1,0 +1,223 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #333;
+}
+
+h1{
+    background-color: #f0c808; /* Yellow header background */
+    color: #000;
+    padding: 20px;
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+header {
+    position: relative;
+    z-index: 100;
+}
+
+.container {
+    display: flex;
+    margin-top: 0; /* Ensure the main content container starts at the top */
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    background-color: #000; /* Black sidebar */
+    height: 100vh;
+    position: fixed;
+    top: 70px; /* Sidebar starts below the header */
+    left: -250px; /* Hidden by default */
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar.open {
+    left: 0; /* Sidebar slides in */
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 20px;
+    border-bottom: 1px solid #fff;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #f0c808; /* Yellow text */
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar ul li a i {
+    margin-right: 10px;
+}
+/* General Content Styling */
+.main-content {
+    padding: 0px;
+    transition: margin-left 0.3s ease;
+    margin-top: 0px; /* Adjust for header height */
+    margin-left: 0;
+}
+
+@media (min-width: 768px) {
+    .main-content {
+        margin-left: 250px; /* Adjust main content margin when sidebar is open */
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+    .sidebar {
+        width: 60%;
+        left: -60%;
+    }
+
+    .sidebar.open {
+        left: 0;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+    .openbtn {
+        left: 10px;
+        top: 10px;
+    }
+}
+
+/* Button to Open Sidebar */
+.openbtn {
+    background-color: #f0c808; /* Yellow button */
+    color: #000;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    position: absolute;
+    left: 15px;
+    top: 10px; /* Adjusted to align with sidebar */
+    font-size: 1.5rem;
+    z-index: 2000;
+}
+
+.openbtn:hover {
+    background-color: #ffd700; /* Lighter shade of yellow */
+}
+
+/* Form container */
+.container {
+    max-width: 400px; /* Adjusted for better readability */
+    margin: 20px auto; /* Center the container horizontally */
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Ensures all children stack vertically */
+    gap: 10px; /* Adds uniform spacing between elements */
+}
+
+/* Form group */
+.form-group {
+    display: flex;
+    flex-direction: column; /* Stack label and input vertically */
+    margin-bottom: 15px; /* Space between form groups */
+}
+
+/* Labels */
+label {
+    font-weight: bold;
+    margin-bottom: 5px; /* Space between label and input */
+}
+
+/* Input fields */
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box; /* Prevents content overflow */
+}
+
+/* Submit button */
+#submitBtn {
+    width: 20%; /* Makes the button stretch across the container */
+    height: 50px;
+    background-color: #ffcc00;
+    color: black;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 4px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#submitBtn:hover {
+    background-color: #e6b800;
+}
+
+/* Total Pending Money Section */
+.total-sum {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* List Container */
+.list-container {
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    padding-top: 15px;
+}
+
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fafafa;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Completed items */
+.completed {
+    text-decoration: line-through;
+    color: grey;
+}
+
+/* Delete Button */
+.delete-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.delete-btn:hover {
+    background-color: darkred;
+}
+
+/* Checkbox */
+.checkbox {
+    margin-right: 10px;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="file:///android_asset/js/savegold.js" defer></script>
+    <link rel="stylesheet" href="file:///android_asset/css/logs.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>gold collection</title>
+</head>
+<body>
+    <header>
+        <h1>जमा सोने</h1>
+    </header>
+    <div class="container">
+        <button class="openbtn" onclick="toggleSidebar()">☰</button>
+        
+        <!-- Sidebar Section -->
+        <aside class="sidebar" id="sidebar">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> सुवर्णकार डायरी</a></li>
+                <li><a href="Customers.html"><i class="fa-solid fa-users"></i>व्यापारी</a></li>
+                <li><a href="savegold.html"><i class="fas fa-store"></i> जमा सोने </a></li>
+                <li><a href="pending gold.html"><i class="fas fa-hand-holding-usd"></i> सोने येणे बाकी </a></li>
+                <li><a href="pending money.html"><i class="fas fa-cash-register"></i> पैसे येणे बाकी </a></li>
+            </ul>
+        </aside>
+        <div class="container">
+            <!-- Form -->
+            <div class="form-group">
+                <label for="clientName">व्यापार्याचे नाव:</label>
+                <input type="text" id="clientName" placeholder="Enter Client Name">
+            </div>
+            <div class="form-group">
+                <label for="savedGold">जमा सोने(gm):</label>
+                <input type="number" id="savedGold" placeholder="Enter weight">
+            </div>
+            <button id="submitBtn">Submit</button>
+    
+            <!-- Total Sum Display -->
+            <div class="total-sum">Total जमा सोने: <span id="totalSum">0</span></div>
+    
+            <!-- List of Saved Items -->
+            <div class="list-container">
+                <h3>Saved Gold List</h3>
+                <div id="Savedgoldlist"></div>
+            </div>
+        </div>
+    </div>
+    <script src="js/savegold.js" defer></script>
+</body>
+</html>
